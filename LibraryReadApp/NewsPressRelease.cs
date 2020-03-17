@@ -66,7 +66,7 @@ namespace LibraryReadApp
                         documentum_r_object_id = keyValuePairs.ContainsKey(SPOConstants.Documentum_r_object_id) ? (keyValuePairs[SPOConstants.Documentum_r_object_id] != null ? keyValuePairs[SPOConstants.Documentum_r_object_id].ToString() : "") : "";
                         documentum_content_id = keyValuePairs.ContainsKey(SPOConstants.Documentum_content_id) ? (keyValuePairs[SPOConstants.Documentum_content_id] != null ? keyValuePairs[SPOConstants.Documentum_content_id].ToString() : "") : "";
                         FieldLookupValue[] lookup = keyValuePairs.ContainsKey(SPOConstants.GalleryImages) ? (FieldLookupValue[])keyValuePairs[SPOConstants.GalleryImages] : null;
-                        display_order = keyValuePairs.ContainsKey(SPOConstants.SortOrder) ? (keyValuePairs[SPOConstants.SortOrder] != null ? keyValuePairs[SPOConstants.SortOrder].ToString() : "") : "";
+                        display_order = keyValuePairs.ContainsKey(SPOConstants.SortOrder) ? (keyValuePairs[SPOConstants.SortOrder] != null ? keyValuePairs[SPOConstants.SortOrder].ToString() : "0") : "0";
 
                         dtResponse.Rows.Add(ConfigurationManager.AppSettings.Get(SPOConstants.SPOFolderNewsPressRelease), Constants.Ir_article, documentum_r_object_id, documentum_i_chronicle_id, documentum_content_id, Constants.Articles_r_folder_path, name, FileFormatConstants.XML, Constants.Articles + "/" + name, guid, guid, guid + '@' + guid, Constants.Articles, display_order);
 
